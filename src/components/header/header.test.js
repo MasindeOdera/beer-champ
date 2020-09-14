@@ -25,4 +25,9 @@ describe('Header Component', () => {
         const wrapper = findByTestAttr(component, 'logoIMG');
         expect(wrapper.length).toBe(1);
     });
+
+    it('Should render company name.', () => {
+        const wrapper = findByTestAttr(component, 'companyName');
+        expect(wrapper.length).toBe(1);
+    });
 });

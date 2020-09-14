@@ -8,7 +8,10 @@ const Header = (props) => {
 		   <div className="wrap">
             <div className="logo">
                 <img data-test="logoIMG" src={Beer} alt="Logo" />
-			</div>
+            </div>
+            <div className="company">
+                <span data-test="companyName">Beer Champ</span>
+            </div>
            </div>
         </header>
     )
