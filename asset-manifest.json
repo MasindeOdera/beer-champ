@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/beer-champ/static/css/main.d1b05096.chunk.css",
+    "main.js": "/beer-champ/static/js/main.b1bfc126.chunk.js",
+    "main.js.map": "/beer-champ/static/js/main.b1bfc126.chunk.js.map",
+    "runtime-main.js": "/beer-champ/static/js/runtime-main.35e5121e.js",
+    "runtime-main.js.map": "/beer-champ/static/js/runtime-main.35e5121e.js.map",
+    "static/js/2.35830e75.chunk.js": "/beer-champ/static/js/2.35830e75.chunk.js",
+    "static/js/2.35830e75.chunk.js.map": "/beer-champ/static/js/2.35830e75.chunk.js.map",
+    "index.html": "/beer-champ/index.html",
+    "precache-manifest.21198b8dd8fe171c5a5d93f4b4a43f9a.js": "/beer-champ/precache-manifest.21198b8dd8fe171c5a5d93f4b4a43f9a.js",
+    "service-worker.js": "/beer-champ/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/beer-champ/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.35830e75.chunk.js.LICENSE.txt": "/beer-champ/static/js/2.35830e75.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/beer-champ/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35e5121e.js",
+    "static/js/2.35830e75.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.b1bfc126.chunk.js"
+  ]
+}
