@@ -689,6 +689,7 @@ var beerChamp
 
 	function fetchData(cb) {
 		if (!cb) {
+			// eslint-disable-next-line
 			throw 'Callback not defined'
 		}
 		setTimeout(function () {
