@@ -1,8 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
+import beerChamp from './service/beers';
 import './App.css';
 
 function App() {
+
+  beerChamp.fetchData(function(err, data) {
+    console.log({data});
+  });
+
   return (
     <div className="App">
       <header className="App-header">
