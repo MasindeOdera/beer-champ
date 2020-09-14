@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Header from './components/header';
 import beerChamp from './service/beers';
-import './App.css';
+import './App.scss';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <h1>Hello World</h1>
     </div>
   );
