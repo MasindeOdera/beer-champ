@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/beer-champ/static/css/main.61b9b26c.chunk.css",
-    "main.js": "/beer-champ/static/js/main.83bcb512.chunk.js",
-    "main.js.map": "/beer-champ/static/js/main.83bcb512.chunk.js.map",
+    "main.css": "/beer-champ/static/css/main.756ace0e.chunk.css",
+    "main.js": "/beer-champ/static/js/main.f6b641e7.chunk.js",
+    "main.js.map": "/beer-champ/static/js/main.f6b641e7.chunk.js.map",
     "runtime-main.js": "/beer-champ/static/js/runtime-main.35e5121e.js",
     "runtime-main.js.map": "/beer-champ/static/js/runtime-main.35e5121e.js.map",
     "static/css/2.0806f248.chunk.css": "/beer-champ/static/css/2.0806f248.chunk.css",
-    "static/js/2.f03ff516.chunk.js": "/beer-champ/static/js/2.f03ff516.chunk.js",
-    "static/js/2.f03ff516.chunk.js.map": "/beer-champ/static/js/2.f03ff516.chunk.js.map",
+    "static/js/2.72812765.chunk.js": "/beer-champ/static/js/2.72812765.chunk.js",
+    "static/js/2.72812765.chunk.js.map": "/beer-champ/static/js/2.72812765.chunk.js.map",
     "index.html": "/beer-champ/index.html",
-    "precache-manifest.df7ff4fcddecdeec196b0c7f23ef0f79.js": "/beer-champ/precache-manifest.df7ff4fcddecdeec196b0c7f23ef0f79.js",
+    "precache-manifest.1a3ecf688fae2301f64ff885d562e94d.js": "/beer-champ/precache-manifest.1a3ecf688fae2301f64ff885d562e94d.js",
     "service-worker.js": "/beer-champ/service-worker.js",
     "static/css/2.0806f248.chunk.css.map": "/beer-champ/static/css/2.0806f248.chunk.css.map",
-    "static/css/main.61b9b26c.chunk.css.map": "/beer-champ/static/css/main.61b9b26c.chunk.css.map",
-    "static/js/2.f03ff516.chunk.js.LICENSE.txt": "/beer-champ/static/js/2.f03ff516.chunk.js.LICENSE.txt",
+    "static/css/main.756ace0e.chunk.css.map": "/beer-champ/static/css/main.756ace0e.chunk.css.map",
+    "static/js/2.72812765.chunk.js.LICENSE.txt": "/beer-champ/static/js/2.72812765.chunk.js.LICENSE.txt",
     "static/media/beer.png": "/beer-champ/static/media/beer.7111053b.png",
     "static/media/semantic.min.css": "/beer-champ/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.35e5121e.js",
     "static/css/2.0806f248.chunk.css",
-    "static/js/2.f03ff516.chunk.js",
-    "static/css/main.61b9b26c.chunk.css",
-    "static/js/main.83bcb512.chunk.js"
+    "static/js/2.72812765.chunk.js",
+    "static/css/main.756ace0e.chunk.css",
+    "static/js/main.f6b641e7.chunk.js"
   ]
 }
