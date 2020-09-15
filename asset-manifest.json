@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/beer-champ/static/css/main.756ace0e.chunk.css",
-    "main.js": "/beer-champ/static/js/main.55955e7d.chunk.js",
-    "main.js.map": "/beer-champ/static/js/main.55955e7d.chunk.js.map",
+    "main.js": "/beer-champ/static/js/main.eb58e813.chunk.js",
+    "main.js.map": "/beer-champ/static/js/main.eb58e813.chunk.js.map",
     "runtime-main.js": "/beer-champ/static/js/runtime-main.35e5121e.js",
     "runtime-main.js.map": "/beer-champ/static/js/runtime-main.35e5121e.js.map",
     "static/css/2.0806f248.chunk.css": "/beer-champ/static/css/2.0806f248.chunk.css",
-    "static/js/2.72812765.chunk.js": "/beer-champ/static/js/2.72812765.chunk.js",
-    "static/js/2.72812765.chunk.js.map": "/beer-champ/static/js/2.72812765.chunk.js.map",
+    "static/js/2.bd2ebdbc.chunk.js": "/beer-champ/static/js/2.bd2ebdbc.chunk.js",
+    "static/js/2.bd2ebdbc.chunk.js.map": "/beer-champ/static/js/2.bd2ebdbc.chunk.js.map",
     "index.html": "/beer-champ/index.html",
-    "precache-manifest.fc7c89be602a5e319e9dcc111f201283.js": "/beer-champ/precache-manifest.fc7c89be602a5e319e9dcc111f201283.js",
+    "precache-manifest.1860e118bc4095c87686d78313a7cac9.js": "/beer-champ/precache-manifest.1860e118bc4095c87686d78313a7cac9.js",
     "service-worker.js": "/beer-champ/service-worker.js",
     "static/css/2.0806f248.chunk.css.map": "/beer-champ/static/css/2.0806f248.chunk.css.map",
     "static/css/main.756ace0e.chunk.css.map": "/beer-champ/static/css/main.756ace0e.chunk.css.map",
-    "static/js/2.72812765.chunk.js.LICENSE.txt": "/beer-champ/static/js/2.72812765.chunk.js.LICENSE.txt",
+    "static/js/2.bd2ebdbc.chunk.js.LICENSE.txt": "/beer-champ/static/js/2.bd2ebdbc.chunk.js.LICENSE.txt",
     "static/media/beer.png": "/beer-champ/static/media/beer.7111053b.png",
     "static/media/semantic.min.css": "/beer-champ/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.35e5121e.js",
     "static/css/2.0806f248.chunk.css",
-    "static/js/2.72812765.chunk.js",
+    "static/js/2.bd2ebdbc.chunk.js",
     "static/css/main.756ace0e.chunk.css",
-    "static/js/main.55955e7d.chunk.js"
+    "static/js/main.eb58e813.chunk.js"
   ]
 }
