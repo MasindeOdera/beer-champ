@@ -23,6 +23,17 @@ function App() {
   // });
   // }
   console.log({beerList});
+  console.log(globalState);
+
+  if(beerList) {
+    // beerList.forEach(function (beer) {
+    //   console.log(beer.colors);
+    //   let variousColors = [];
+    //   variousColors.push(beer.colors);
+    // });
+    // const variousColors = (beerList) => beerList.filter(colors => beerList.colors);
+    // console.log(variousColors);
+  };
 
   useEffect(() => {
     beerChamp.fetchData(function(err, data) {

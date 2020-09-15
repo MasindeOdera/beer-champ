@@ -2,6 +2,7 @@ import React, {createContext, useReducer} from 'react';
 
 const initialState = {
     beerList: [],
+    colors: [],
 };
 const store = createContext(initialState);
 const { Provider } = store;
@@ -14,6 +15,11 @@ const StateProvider = ( { children } ) => {
               ...state,
               beerList: action.payload,
             };
+        // case 'GET_COLORS':
+        //     return {
+        //         ...state,
+        //         colors: [...state.colors, action.payload],
+        //     }
         default:
             return initialState;
     };
