@@ -3,6 +3,8 @@ import React, {createContext, useReducer} from 'react';
 const initialState = {
     beerList: [],
     colors: [],
+    styles: [],
+    filteredList: [],
 };
 const store = createContext(initialState);
 const { Provider } = store;
@@ -10,16 +12,21 @@ const { Provider } = store;
 const StateProvider = ( { children } ) => {
   const [state, dispatch] = useReducer((state, action) => {
     switch(action.type) {
-        case 'GET_LIST':
-          return {
+        case 'SET_LIST':
+            return {
               ...state,
               beerList: action.payload,
             };
-        // case 'GET_COLORS':
-        //     return {
-        //         ...state,
-        //         colors: [...state.colors, action.payload],
-        //     }
+        case 'SET_STYLES':
+            return {
+                ...state,
+                styles: action.payload,
+            };
+        case 'SET_COLORS':
+            return {
+                ...state,
+                colors: action.payload,
+            }
         default:
             return initialState;
     };
