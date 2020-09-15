@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { store } from './context/appStore.js';
 import Header from './components/header';
 import DropdownBeerStyle from './components/dropdownBeerStyle';
 import DropdownBeerName from './components/dropdownBeerName';
@@ -8,21 +9,27 @@ import './App.scss';
 
 function App() {
 
-  const [beers, setBeers] = useState([]);
-  console.log(beers);
+  const globalState = useContext(store);
+  const { beerList } = globalState.state;
+  const { dispatch } = globalState;
 
-  if(beers) {
-    beers.forEach(function (beer) {
-      console.log(beer.colors);
-      console.log(beer.style);
-  });
-  }
+  // const [beers, setBeers] = useState([]);
+  // console.log(beers);
+
+  // if(beers) {
+  //   beers.forEach(function (beer) {
+  //     // console.log(beer.colors);
+  //     // console.log(beer.style);
+  // });
+  // }
+  console.log({beerList});
 
   useEffect(() => {
     beerChamp.fetchData(function(err, data) {
-      setBeers(data);
+      // setBeers(data);
+      dispatch({ type: 'GET_LIST', payload: data });
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">
