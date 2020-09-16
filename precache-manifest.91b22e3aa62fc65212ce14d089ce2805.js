@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc3b5f1605643f77f5709e6fea626422",
+    "revision": "c1710b6bcd52c6695f2291ecef3c2cca",
     "url": "/beer-champ/index.html"
   },
   {
-    "revision": "746716293dbb375b4b25",
+    "revision": "432e25aec5492d486d88",
     "url": "/beer-champ/static/css/2.0806f248.chunk.css"
   },
   {
-    "revision": "8991305e618e12404331",
+    "revision": "0f51361c4e98edc8f353",
     "url": "/beer-champ/static/css/main.60fc56d7.chunk.css"
   },
   {
-    "revision": "746716293dbb375b4b25",
-    "url": "/beer-champ/static/js/2.529be7f2.chunk.js"
+    "revision": "432e25aec5492d486d88",
+    "url": "/beer-champ/static/js/2.726c6263.chunk.js"
   },
   {
     "revision": "5bd09eb7f2cf4d145d532d862be18942",
-    "url": "/beer-champ/static/js/2.529be7f2.chunk.js.LICENSE.txt"
+    "url": "/beer-champ/static/js/2.726c6263.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8991305e618e12404331",
-    "url": "/beer-champ/static/js/main.00f3db1c.chunk.js"
+    "revision": "0f51361c4e98edc8f353",
+    "url": "/beer-champ/static/js/main.16778361.chunk.js"
   },
   {
     "revision": "65ffbb65de88ad8ba804",
