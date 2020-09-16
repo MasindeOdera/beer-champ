@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
-import { store } from "./../../context/appStore.js";
+import React, { useEffect, useState } from "react";
+// import { store } from "./../../context/appStore.js";
 import { Dropdown } from "semantic-ui-react";
-import beerChamp from "../../service/beers";
-// const beerChamp = require("../../service/beers");
 
+const beerChamp = require("../../service/beers");
+
+//The Semantic UI used in this project equires this structure.
 class DropdownItem {
   constructor(value) {
     this.key = value;
@@ -13,39 +14,32 @@ class DropdownItem {
 }
 
 const DropdownMenu = () => {
-  const globalState = useContext(store);
-  const { beerList } = globalState.state;
-  // const { dispatch } = globalState;
-
-  console.log(beerList);
   const [beersStyles, setBeersStyles] = useState([]);
   const [allBeers, setAllBeers] = useState([]);
   const [selectedStyle, setSelectedStyle] = useState("");
   const [beersTitles, setBeerTitles] = useState([]);
-  const [beersColors, setBeerColors] = useState([]);
+  const [beerColors, setBeerColors] = useState([]);
 
   useEffect(() => {
     beerChamp.fetchData((err, data) => {
       const stylesArray = [];
-      const tempStylesArray = [];
-      let loseDuplicates = [];
-      data.map((item, index) => {
-        tempStylesArray.push(item.style);
-        console.log("First time:", tempStylesArray);
-        loseDuplicates = Array.from(new Set(tempStylesArray));
-        console.log("New list without duplicates", loseDuplicates);
-        return stylesArray.push(new DropdownItem(loseDuplicates));
+      data.map((item) => {
+        //Need to filter out duplicate style names
+        if (!stylesArray.includes(item.style)) {
+          return stylesArray.push(item.style);
+        }
+        return stylesArray;
       });
-      let removeDuplicate = Array.from(new Set(tempStylesArray));
-      console.log(tempStylesArray);
-      console.log(stylesArray);
-      console.log(removeDuplicate);
+      const outputArray = [];
+      stylesArray.map((style) => {
+        return outputArray.push(new DropdownItem(style));
+      });
       setAllBeers(data);
-      setBeersStyles(stylesArray);
+      setBeersStyles(outputArray);
     });
   }, []);
 
-  const onStyleClickHandler = (event, data) => {
+  const onClickHandlerStyle = (event, data) => {
     setSelectedStyle(data.value);
     const titlesArray = [];
     allBeers
@@ -53,16 +47,19 @@ const DropdownMenu = () => {
       .map((item) => {
         return titlesArray.push(new DropdownItem(item.title));
       });
+
     setBeerTitles(titlesArray);
   };
 
-  const onTitleClickHandler = (event, data) => {
-    setBeerTitles(data.value);
+  const onClickHandlerTitle = (event, data) => {
     const colorsArray = [];
     allBeers
       .filter((beer) => beer.title === data.value)
       .map((item) => {
-        return colorsArray.push(new DropdownItem(item.colors));
+        item.colors.map((color) => {
+          return colorsArray.push(new DropdownItem(color));
+        });
+        return colorsArray;
       });
     setBeerColors(colorsArray);
   };
@@ -74,23 +71,21 @@ const DropdownMenu = () => {
         fluid
         selection
         options={beersStyles}
-        onChange={onStyleClickHandler}
+        onChange={onClickHandlerStyle}
         value={selectedStyle}
       />
-
       <Dropdown
         placeholder="Select Beer Name"
         fluid
         selection
+        onChange={onClickHandlerTitle}
         options={beersTitles}
-        onChange={onTitleClickHandler}
       />
-
       <Dropdown
         placeholder="Select Beer Color"
         fluid
         selection
-        options={beersColors}
+        options={beerColors}
       />
     </React.Fragment>
   );
