@@ -31,16 +31,21 @@ const DropdownMenu = () => {
         return stylesArray;
       });
       const outputArray = [];
+      //In order to use Semantic UI dropdown.
       stylesArray.map((style) => {
         return outputArray.push(new DropdownItem(style));
       });
+      //Assign all beer data to allBeers
       setAllBeers(data);
+      //Assign all available styles to beerStyles
       setBeersStyles(outputArray);
     });
   }, []);
 
   const onClickHandlerStyle = (event, data) => {
     setSelectedStyle(data.value);
+    setBeerTitles([]);
+    setBeerColors([]);
     const titlesArray = [];
     allBeers
       .filter((beer) => beer.style === data.value)
