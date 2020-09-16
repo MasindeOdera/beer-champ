@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/header";
 import DropdownMenu from "./components/dropdownMenu";
+import BeerList from "./components/beerList";
 import "./App.scss";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <h4>Enjoy our beers!</h4>
       <main>
         <DropdownMenu />
+        <BeerList />
       </main>
     </div>
   );

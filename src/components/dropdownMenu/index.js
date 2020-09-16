@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-// import { store } from "./../../context/appStore.js";
+import React, { useEffect, useState, useContext } from "react";
+import { store } from "./../../context/appStore.js";
 import { Dropdown } from "semantic-ui-react";
 
 const beerChamp = require("../../service/beers");
@@ -14,6 +14,9 @@ class DropdownItem {
 }
 
 const DropdownMenu = () => {
+  const globalState = useContext(store);
+  const { dispatch } = globalState;
+
   const [beersStyles, setBeersStyles] = useState([]);
   const [allBeers, setAllBeers] = useState([]);
   const [selectedStyle, setSelectedStyle] = useState("");
@@ -47,17 +50,22 @@ const DropdownMenu = () => {
     setBeerTitles([]);
     setBeerColors([]);
     const titlesArray = [];
+    const selection = [];
     allBeers
       .filter((beer) => beer.style === data.value)
       .map((item) => {
+        selection.push(item);
         return titlesArray.push(new DropdownItem(item.title));
       });
 
     setBeerTitles(titlesArray);
+    dispatch({ type: "UPDATE_SELECTION", payload: selection });
   };
 
   const onClickHandlerTitle = (event, data) => {
     const colorsArray = [];
+    const selectedBeer = data.value;
+    dispatch({ type: "CHOSEN_BEER", payload: selectedBeer });
     allBeers
       .filter((beer) => beer.title === data.value)
       .map((item) => {
