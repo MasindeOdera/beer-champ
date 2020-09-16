@@ -7,27 +7,54 @@ function BeerList() {
   const globalState = useContext(store);
   const { selection, beer } = globalState.state;
 
-  console.log(selection, beer);
+  const finalBeer = [];
+  if (beer.length > 0) {
+    let finalChoice = selection.filter((item) => item.title === beer);
+    finalBeer.push(finalChoice);
+  }
 
-  const beerDetail = selection.map((beer, index) => (
-    <Card>
-      <Card.Content key={index}>
-        <Image floated="right" size="mini" src={beer.images[0].image} />
-        <Card.Header>{beer.title}</Card.Header>
-        <Card.Meta>{beer.style}</Card.Meta>
-        <Card.Meta>Alcohol Percentage:{beer.alcoholPercentage}%</Card.Meta>
+  const beerDetail = selection.map((detail, index) => (
+    <Card key={index}>
+      <Card.Content>
+        <Image floated="right" size="mini" src={detail.images[0].image} />
+        <Card.Header>{detail.title}</Card.Header>
+        <Card.Meta>{detail.style}</Card.Meta>
+        <Card.Meta>Alcohol Percentage:{detail.alcoholPercentage}%</Card.Meta>
         <br />
         <Card.Header>
-          Price:<strong>{beer.displayInformationPrice.price}</strong>
+          Price:<strong>{detail.displayInformationPrice.price}</strong>
         </Card.Header>
       </Card.Content>
     </Card>
   ));
 
+  const finalOption =
+    beer.length > 0
+      ? finalBeer[0].map((option, index) => (
+          <Card key={index}>
+            <Card.Content>
+              <Image floated="right" size="mini" src={option.images[0].image} />
+              <Card.Header>{option.title}</Card.Header>
+              <Card.Meta>{option.style}</Card.Meta>
+              <Card.Meta>
+                Alcohol Percentage:{option.alcoholPercentage}%
+              </Card.Meta>
+              <br />
+              <Card.Header>
+                Price:<strong>{option.displayInformationPrice.price}</strong>
+              </Card.Header>
+            </Card.Content>
+          </Card>
+        ))
+      : null;
+
   return (
     <div className="list">
       {selection.length > 0 ? <h2>Beer Options</h2> : null}
-      <Card.Group>{beerDetail}</Card.Group>
+      <Card.Group>
+        {beer.length === 0 ? beerDetail : null}
+        {finalOption}
+      </Card.Group>
     </div>
   );
 }

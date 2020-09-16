@@ -1,8 +1,8 @@
 import React, { createContext, useReducer } from "react";
 
 const initialState = {
+  collection: [],
   selection: [],
-  filteredList: [],
   beer: "",
 };
 const store = createContext(initialState);
