@@ -1,17 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { store } from "./../../context/appStore.js";
 import { Dropdown } from "semantic-ui-react";
 import beerChamp from "../../service/beers";
 // const beerChamp = require("../../service/beers");
 
 class DropdownItem {
-  constructor(value, index) {
-    this.key = index;
+  constructor(value) {
+    this.key = value;
     this.value = value;
     this.text = value;
   }
 }
 
 const DropdownMenu = () => {
+  const globalState = useContext(store);
+  const { beerList } = globalState.state;
+  // const { dispatch } = globalState;
+
+  console.log(beerList);
   const [beersStyles, setBeersStyles] = useState([]);
   const [allBeers, setAllBeers] = useState([]);
   const [selectedStyle, setSelectedStyle] = useState("");
@@ -21,11 +27,17 @@ const DropdownMenu = () => {
   useEffect(() => {
     beerChamp.fetchData((err, data) => {
       const stylesArray = [];
+      const tempStylesArray = [];
+      let loseDuplicates = [];
       data.map((item, index) => {
-        return stylesArray.push(new DropdownItem(item.style, index));
+        tempStylesArray.push(item.style);
+        console.log("First time:", tempStylesArray);
+        loseDuplicates = Array.from(new Set(tempStylesArray));
+        console.log("New list without duplicates", loseDuplicates);
+        return stylesArray.push(new DropdownItem(loseDuplicates));
       });
-      let removeDuplicate = Array.from(new Set(stylesArray));
-      removeDuplicate.push(new DropdownItem(removeDuplicate));
+      let removeDuplicate = Array.from(new Set(tempStylesArray));
+      console.log(tempStylesArray);
       console.log(stylesArray);
       console.log(removeDuplicate);
       setAllBeers(data);
@@ -58,7 +70,7 @@ const DropdownMenu = () => {
   return (
     <React.Fragment>
       <Dropdown
-        placeholder="Select Style"
+        placeholder="Select Beer Style"
         fluid
         selection
         options={beersStyles}
@@ -67,7 +79,7 @@ const DropdownMenu = () => {
       />
 
       <Dropdown
-        placeholder="Select Titles"
+        placeholder="Select Beer Name"
         fluid
         selection
         options={beersTitles}
@@ -75,7 +87,7 @@ const DropdownMenu = () => {
       />
 
       <Dropdown
-        placeholder="Select Color"
+        placeholder="Select Beer Color"
         fluid
         selection
         options={beersColors}

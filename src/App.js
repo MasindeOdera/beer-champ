@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-// import { store } from "./context/appStore.js";
+import React, { useEffect, useContext } from "react";
+import { store } from "./context/appStore.js";
 import Header from "./components/header";
 // import DropdownBeerStyle from './components/dropdownBeerStyle';
 // import DropdownBeerName from './components/dropdownBeerName';
@@ -10,14 +10,15 @@ import beerChamp from "./service/beers";
 import "./App.scss";
 
 function App() {
-  // const globalState = useContext(store);
-  // const { beerList } = globalState.state;
-  // const { dispatch } = globalState;
+  const globalState = useContext(store);
+  const { beerList } = globalState.state;
+  const { dispatch } = globalState;
+  console.log(beerList);
 
   useEffect(() => {
     beerChamp.fetchData(function (err, data) {
       //Make the list of beers available.
-      // dispatch({ type: "SET_LIST", payload: data });
+      dispatch({ type: "SET_LIST", payload: data });
 
       let beerList = data;
       //Create source for Menu Styles content
@@ -53,7 +54,7 @@ function App() {
       //Share the list of beer colors.
       // dispatch({ type: "SET_COLORS", payload: removeDuplicateColor });
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">
