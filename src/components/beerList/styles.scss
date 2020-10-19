@@ -1,1 +1,10 @@
 @import "./../../shared.scss";
+
+.list {
+  .ui.cards {
+    margin: -0.875em 5.4em;
+  }
+  .ui.card:only-child {
+    margin: auto;
+  }
+}
