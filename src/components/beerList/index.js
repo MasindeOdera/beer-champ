@@ -5,7 +5,7 @@ import "./styles.scss";
 
 function BeerList() {
   const globalState = useContext(store);
-  const { selection, beer } = globalState.state;
+  const { selection, beer, color } = globalState.state;
 
   const finalBeer = [];
   if (beer.length > 0) {
@@ -47,13 +47,36 @@ function BeerList() {
           </Card>
         ))
       : null;
+  
+  const selectedColor =
+    beer.length > 0
+      ? finalBeer[0].map((option, index) => (
+          <Card key={index}>
+            <Card.Content>
+              <Image floated="right" size="mini" src={option.images[0].image} />
+              <Card.Header>{option.title}</Card.Header>
+              <Card.Meta>{option.style}</Card.Meta>
+              <Card.Meta>
+                Alcohol Percentage:{option.alcoholPercentage}%
+              </Card.Meta>
+              <Card.Meta>
+                Colour: {color}
+              </Card.Meta>
+              <br />
+              <Card.Header>
+                Price:<strong>{option.displayInformationPrice.price}</strong>
+              </Card.Header>
+            </Card.Content>
+          </Card>
+        ))
+      : null;
 
   return (
     <div className="list">
       {selection.length > 0 ? <h2>Beer Options</h2> : null}
       <Card.Group>
-        {beer.length === 0 ? beerDetail : null}
-        {finalOption}
+        { beer.length === 0 ? beerDetail : null }
+        { color.length === 0 ? finalOption : selectedColor }
       </Card.Group>
     </div>
   );

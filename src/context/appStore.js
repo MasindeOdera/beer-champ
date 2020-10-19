@@ -1,9 +1,9 @@
 import React, { createContext, useReducer } from "react";
 
 const initialState = {
-  collection: [],
   selection: [],
   beer: "",
+  color: "",
 };
 const store = createContext(initialState);
 const { Provider } = store;
@@ -20,6 +20,11 @@ const StateProvider = ({ children }) => {
         return {
           ...state,
           beer: action.payload,
+        };
+      case "CHOSEN_COLOR":
+        return {
+          ...state,
+          color: action.payload,
         };
       default:
         return initialState;

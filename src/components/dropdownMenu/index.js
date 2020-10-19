@@ -77,6 +77,11 @@ const DropdownMenu = () => {
     setBeerColors(colorsArray);
   };
 
+  const onClickHandlerColor = (event, data) => {
+    const selectedColor = data.value;
+    dispatch({ type: "CHOSEN_COLOR", payload: selectedColor });
+  };
+
   return (
     <React.Fragment>
       <Dropdown
@@ -98,6 +103,7 @@ const DropdownMenu = () => {
         placeholder="Select Beer Color"
         fluid
         selection
+        onChange={onClickHandlerColor}
         options={beerColors}
       />
     </React.Fragment>
