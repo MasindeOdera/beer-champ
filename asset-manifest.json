@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/beer-champ/static/css/main.657e4f80.chunk.css",
+    "main.css": "/beer-champ/static/css/main.e9ea153a.chunk.css",
     "main.js": "/beer-champ/static/js/main.91dfe054.chunk.js",
     "main.js.map": "/beer-champ/static/js/main.91dfe054.chunk.js.map",
     "runtime-main.js": "/beer-champ/static/js/runtime-main.35e5121e.js",
@@ -9,10 +9,10 @@
     "static/js/2.eb211ded.chunk.js": "/beer-champ/static/js/2.eb211ded.chunk.js",
     "static/js/2.eb211ded.chunk.js.map": "/beer-champ/static/js/2.eb211ded.chunk.js.map",
     "index.html": "/beer-champ/index.html",
-    "precache-manifest.5e44bb1c1039f40b234393aa2ae65d35.js": "/beer-champ/precache-manifest.5e44bb1c1039f40b234393aa2ae65d35.js",
+    "precache-manifest.73dd90ab6ca4a55226dcecdff0e81a13.js": "/beer-champ/precache-manifest.73dd90ab6ca4a55226dcecdff0e81a13.js",
     "service-worker.js": "/beer-champ/service-worker.js",
     "static/css/2.0806f248.chunk.css.map": "/beer-champ/static/css/2.0806f248.chunk.css.map",
-    "static/css/main.657e4f80.chunk.css.map": "/beer-champ/static/css/main.657e4f80.chunk.css.map",
+    "static/css/main.e9ea153a.chunk.css.map": "/beer-champ/static/css/main.e9ea153a.chunk.css.map",
     "static/js/2.eb211ded.chunk.js.LICENSE.txt": "/beer-champ/static/js/2.eb211ded.chunk.js.LICENSE.txt",
     "static/media/beer.png": "/beer-champ/static/media/beer.7111053b.png",
     "static/media/semantic.min.css": "/beer-champ/static/media/outline-icons.ef60a4f6.woff"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.35e5121e.js",
     "static/css/2.0806f248.chunk.css",
     "static/js/2.eb211ded.chunk.js",
-    "static/css/main.657e4f80.chunk.css",
+    "static/css/main.e9ea153a.chunk.css",
     "static/js/main.91dfe054.chunk.js"
   ]
 }
