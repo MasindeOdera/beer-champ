@@ -19,10 +19,10 @@ function BeerList() {
         <Image floated="right" size="mini" src={detail.images[0].image} />
         <Card.Header>{detail.title}</Card.Header>
         <Card.Meta>{detail.style}</Card.Meta>
-        <Card.Meta>Alcohol Percentage:{detail.alcoholPercentage}%</Card.Meta>
+        <Card.Meta>Alcohol Percentage: {detail.alcoholPercentage}%</Card.Meta>
         <br />
         <Card.Header>
-          Price:<strong>{detail.displayInformationPrice.price}</strong>
+          Price: <strong>{detail.displayInformationPrice.price}</strong>
         </Card.Header>
       </Card.Content>
     </Card>
@@ -37,11 +37,11 @@ function BeerList() {
               <Card.Header>{option.title}</Card.Header>
               <Card.Meta>{option.style}</Card.Meta>
               <Card.Meta>
-                Alcohol Percentage:{option.alcoholPercentage}%
+                Alcohol Percentage: {option.alcoholPercentage}%
               </Card.Meta>
               <br />
               <Card.Header>
-                Price:<strong>{option.displayInformationPrice.price}</strong>
+                Price: <strong>{option.displayInformationPrice.price}</strong>
               </Card.Header>
             </Card.Content>
           </Card>
@@ -57,14 +57,14 @@ function BeerList() {
               <Card.Header>{option.title}</Card.Header>
               <Card.Meta>{option.style}</Card.Meta>
               <Card.Meta>
-                Alcohol Percentage:{option.alcoholPercentage}%
+                Alcohol Percentage: {option.alcoholPercentage}%
               </Card.Meta>
               <Card.Meta>
-                Colour: {color}
+                Colour: {color.toUpperCase()}
               </Card.Meta>
               <br />
               <Card.Header>
-                Price:<strong>{option.displayInformationPrice.price}</strong>
+                Price: <strong>{option.displayInformationPrice.price}</strong>
               </Card.Header>
             </Card.Content>
           </Card>

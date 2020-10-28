@@ -1,11 +1,16 @@
 @import "./shared.scss";
 
 .App {
-  text-align: center;
+  h4 {
+    width: 60%;
+    margin: auto;
+    padding-left: 20px;
+  }
 
   main {
     width: 60%;
     margin: auto;
+    padding-left: 10px;
 
     .ui.fluid.selection.dropdown {
       margin: 10px;
